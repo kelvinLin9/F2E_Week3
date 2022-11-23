@@ -10,6 +10,11 @@ const routes = [
     path: '/AcceptChallenge',
     name: 'AcceptChallenge',
     component: () => import('../views/AcceptChallenge.vue')
+  },
+  {
+    path: '/SortWork',
+    name: 'SortWork',
+    component: () => import('../views/SortWork.vue')
   }
 ]
 

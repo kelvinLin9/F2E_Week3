@@ -13,9 +13,9 @@
       需要請你先了解 Scrum 的流程與精神！<br>
       請接受挑戰任務，成功通過 Scrum 新手村的挑戰任務吧！
     </p>
-    <button class="start-btn fs-28">
+    <router-link to="/AcceptChallenge" class="start-btn fs-28">
       開始挑戰
-    </button>
+    </router-link>
   </div>
 </template>
 
@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 .start-btn {
+  text-decoration: none;
   position: absolute;
   right: 5%;
   bottom: 5%;
