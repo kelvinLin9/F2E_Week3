@@ -4,11 +4,59 @@
 .bg-main {
   background: radial-gradient(50% 50% at 50% 50%, #497333 0%, #1A451D 100%);
 }
-  // .bg-home1 {
-  //   background-image: url(~assets/images/home-1.png);
-  //   width: 150px;
-  //   height: 305px;
-  //   position: absolute;
-  //   bottom:0;
-  //   left: 0;
-  // }
+.bg-logo {
+  background-image: url(~assets/images/bg-logo.png);
+  position: absolute;
+  width: 238px;
+  height: 57px;
+  left: 40px;
+  top: 27px;
+}
+.bg-poker1 {
+  background-image: url(~assets/images/bg-poker1.png);
+  position: absolute;
+  width: 616px;
+  height: 329px;
+  left: 0px;
+  bottom:0px;
+}
+.bg-poker2 {
+  background-image: url(~assets/images/bg-poker2.png);
+  position: absolute;
+  width: 536px;
+  height: 310px;
+  right: 0px;
+  top: 0px;  
+}
+.bg-chips1 {
+  background-image: url(~assets/images/bg-chips1.png);
+  position: absolute;
+  width: 95px;
+  height: 69px;
+  left: 47px;
+  top: 307px;  
+}
+.bg-chips2 {
+  background-image: url(~assets/images/bg-chips2.png);
+  position: absolute;
+  width: 88px;
+  height: 74px;
+  left: 50%;
+  top: 47px; 
+}
+.bg-chips3 {
+  background-image: url(~assets/images/bg-chips3.png);
+  position: absolute;
+  width: 112px;
+  height: 115px;
+  left: 53%;
+  bottom: 5%; 
+}
+.bg-dice {
+  background-image: url(~assets/images/bg-dice.png);
+  position: absolute;
+  width: 147px;
+  height: 142px;
+  right: 2%;
+  top: 50%; 
+}

@@ -1,5 +1,7 @@
 <template>
-  <router-view/>
+  <div class="container-fluid bg-main vh-100 position-relative">
+    <router-view/>
+  </div>
 </template>
 
 <style lang="scss">
