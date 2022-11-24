@@ -3,7 +3,6 @@
     <div class="row">
       <div class="col-2 pt-2 ps-5 my-5">
         <img src="../assets/images/tina.png" alt="">
-        <img src="../assets/images/tina-name.png" alt="">
       </div>
       <div class="col-10 my-5 cha-box fs-16 position-relative">
         <div class="speak"></div>
