@@ -44,7 +44,7 @@
         </p>
       </div>
     </div>
-    <router-link to="/SortWork" class="accept-btn fs-28">
+    <router-link to="/ArrangeTasks" class="accept-btn fs-28">
       接受挑戰
     </router-link>
   </div>

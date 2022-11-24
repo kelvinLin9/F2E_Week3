@@ -44,7 +44,7 @@ export default {
         console.log(evt)
         // 获取拖动后的排序
         const arr = sortable.toArray()
-        alert(JSON.stringify(arr))
+        alert(arr)
       }
     }
     // 初始化

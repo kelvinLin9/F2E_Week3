@@ -22,9 +22,9 @@ const routes = [
     component: () => import('../views/MembersTalk.vue')
   },
   {
-    path: '/LearnProcess',
-    name: 'LearnProcess',
-    component: () => import('../views/LearnProcess.vue')
+    path: '/ArrangeTasks',
+    name: 'ArrangeTasks',
+    component: () => import('../views/ArrangeTasks.vue')
   }
 ]
 
