@@ -1,5 +1,6 @@
 <template>
-  <div class="container vh-100 d-flex justify-content-center align-items-center flex-column Noto-Sans-TC fs-20 test">
+  <div class="container vh-100 d-flex justify-content-center align-items-center flex-column Noto-Sans-TC fs-20">
+    <p class="todolist text-white fs-30">產品待辦清單</p>
     <div class="sort-works-up text-white d-flex justify-content-center align-items-center">
       用<span class="fs-24">&ensp;拖移&ensp;</span>的方式調整優先順序
     </div>
@@ -24,7 +25,7 @@
       <div>優先權</div>
       <div>→ 低</div>
     </div>
-    <router-link to="/MembersTalk" class="accept-btn fs-28">
+    <router-link to="/MembersTalk" class="next-btn fs-28">
       完成
     </router-link>
   </div>
@@ -78,20 +79,9 @@ export default {
   width: 167px;
   height: 235px;
 }
-.accept-btn {
-  text-decoration: none;
+.todolist {
   position: absolute;
-  right: 5%;
-  bottom: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color:  white;
-  padding: 16px;
-  width: 280px;
-  height: 88px;
-  background: #000000;
-  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
+  top: 50%;
+  left: 13%;
 }
 </style>

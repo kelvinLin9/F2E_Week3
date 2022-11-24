@@ -44,7 +44,7 @@
         </p>
       </div>
     </div>
-    <router-link to="/ArrangeTasks" class="accept-btn fs-28">
+    <router-link to="/ArrangeTasks" class="next-btn fs-28">
       接受挑戰
     </router-link>
   </div>
@@ -57,22 +57,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.accept-btn {
-  text-decoration: none;
-  position: absolute;
-  right: 5%;
-  bottom: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color:  white;
-  padding: 16px;
-  width: 280px;
-  height: 88px;
-  background: #000000;
-  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-}
 .cha-box {
   display: flex;
   justify-content: start;
