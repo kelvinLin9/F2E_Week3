@@ -6,17 +6,17 @@
     </div>
     <div class="container sort-works text-white">
       <div class="row mt-4" id="sort-works">
-        <div class="col sort-work" data-id="1">
-          <img src="../assets/images/todo1.png" alt="">
+        <div class="col sort-work" data-id="4">
+          <img src="../assets/images/todo4.png" alt="">
         </div>
         <div class="col sort-work" data-id="2">
           <img src="../assets/images/todo2.png" alt="">
         </div>
+        <div class="col sort-work" data-id="1">
+          <img src="../assets/images/todo1.png" alt="">
+        </div>
         <div class="col sort-work" data-id="3">
           <img src="../assets/images/todo3.png" alt="">
-        </div>
-        <div class="col sort-work" data-id="4">
-          <img src="../assets/images/todo4.png" alt="">
         </div>
       </div>
     </div>
@@ -25,31 +25,47 @@
       <div>優先權</div>
       <div>→ 低</div>
     </div>
-    <router-link to="/MembersTalk" class="next-btn fs-28">
+    <button  class="next-btn fs-28" @click="finish">
       完成
-    </router-link>
+    </button>
   </div>
 </template>
 
 <script>
 import Sortable from 'sortablejs'
+import router from '@/router'
 export default {
+  data () {
+    return {
+      sortedCorrectly: false
+    }
+  },
+  methods: {
+    finish () {
+      if (this.sortedCorrectly) {
+        router.push('/MembersTalk')
+      } else {
+        alert('FQ')
+      }
+    }
+  },
   mounted () {
-    // 获取对象
-    const el = document.getElementById('sort-works')
-    // 设置配置
+    const sortWorks = document.getElementById('sort-works')
+    const answerArr = ['1', '2', '3', '4']
     const ops = {
       animation: 1000,
-      // 拖动结束
-      onEnd: function (evt) {
-        console.log(evt)
+      onEnd: (e) => {
         // 获取拖动后的排序
         const arr = sortable.toArray()
-        alert(arr)
+        if (arr.toString() === answerArr.toString()) {
+          this.sortedCorrectly = true
+        } else {
+          this.sortedCorrectly = false
+        }
       }
     }
     // 初始化
-    var sortable = Sortable.create(el, ops)
+    var sortable = Sortable.create(sortWorks, ops)
   }
 }
 </script>
