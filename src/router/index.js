@@ -35,17 +35,17 @@ const routes = [
     path: '/TestProcess',
     name: 'TestProcess',
     component: () => import('../views/TestProcess.vue')
+  },
+  {
+    path: '/TheFeedback',
+    name: 'TheFeedback',
+    component: () => import('../views/TheFeedback.vue')
+  },
+  {
+    path: '/FinishAll',
+    name: 'FinishAll',
+    component: () => import('../views/FinishAll.vue')
   }
-  // {
-  //   path: '/TheFeedback',
-  //   name: 'TheFeedback',
-  //   component: () => import('../views/TheFeedback.vue')
-  // },
-  // {
-  //   path: '/FinishAll',
-  //   name: 'FinishAll',
-  //   component: () => import('../views/FinishAll.vue')
-  // }
 ]
 
 const router = createRouter({

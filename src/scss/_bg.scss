@@ -52,6 +52,31 @@
   left: 53%;
   bottom: 5%; 
 }
+.bg-chips4 {
+  background-image: url(~assets/images/bg-chips4.png);
+  position: absolute;
+  width: 202px;
+  height: 222px;
+  left: 53%;
+  bottom: 5%; 
+}
+.bg-chips5 { 
+  background-image: url(~assets/images/bg-chips5.png);
+  position: absolute;
+  width: 269px;
+  height: 277px;
+  left: 53%;
+  bottom: 5%; 
+} 
+.bg-chips6 {
+  background-image: url(~assets/images/bg-chips6.png);
+  position: absolute;
+  width: 250px;
+  height: 299px;
+  right: 7%;
+  bottom: 1.5%; 
+  z-index: 1050;
+}
 .bg-dice {
   background-image: url(~assets/images/bg-dice1.png);
   position: absolute;
@@ -59,4 +84,52 @@
   height: 142px;
   right: 2%;
   top: 50%; 
+}
+.bg-test-process {
+  background-image: url(~assets/images/bg-test-process.png);
+  position: absolute;
+  width: 890px;
+  height: 401px;
+  left: 18%;
+  top: 45%; 
+}
+.bg-coin1 {
+  background-image: url(~assets/images/bg-coin1.png);
+  position: absolute;
+  width: 83px;
+  height: 51px;
+  left: 47px;
+  top: 307px;  
+}
+.bg-coin2 {
+  background-image: url(~assets/images/bg-coin2.png);
+  position: absolute;
+  width: 46px;
+  height: 42px;
+  left: 40%;
+  top: 47px; 
+}
+.bg-coin3 {
+  background-image: url(~assets/images/bg-coin3.png);
+  position: absolute;
+  width: 60px;
+  height: 42px;
+  left: 60%;
+  top: 100px;  
+}
+.bg-coin4 {
+  background-image: url(~assets/images/bg-coin4.png);
+  position: absolute;
+  width: 93px;
+  height: 98px;
+  left: 53%;
+  bottom: 15%;  
+}
+.bg-coin5 {
+  background-image: url(~assets/images/bg-coin5.png);
+  position: absolute;
+  width: 56px;
+  height: 51px;
+  right: 2%;
+  top: 50%;  
 }

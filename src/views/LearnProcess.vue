@@ -12,36 +12,61 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-2 pt-2 ps-5 ">
-        <!-- <img src="../assets/images/tina.png" alt="">
-        <img src="../assets/images/tina-name.png" alt=""> -->
-      </div>
+      <div class="col-2 pt-2 ps-5 "></div>
       <div class="col-10 speaker-box fs-20 position-relative">
-        <!-- <div class="speaker-arrow"></div> -->
         <p>
           提示：請用拖移的方式將標籤拖移至對應的方框裡
         </p>
       </div>
     </div>
-    <div class="row text-white mt-5">
-      <div class="col">
-        <div class="title">
-          每日站立會議(Daily Scrum)
-        </div>
-      </div>
-      <div class="col">
-        <div class="title">
-          短衝檢視會議(Sprint Review)
-        </div>
-      </div>
-      <div class="col">
-        <div class="title">
-          短衝自省會議(Sprint Retrospective)
-        </div>
+    <div class="row">
+      <div class="col-2 pt-2 ps-5"></div>
+      <div class="col-10 speaker-box fs-20 position-relative mt-5">
+        <p>
+          推薦工具：
+          <img src="../assets/images/confluence.png" alt="confluence-logo">
+        </p>
       </div>
     </div>
-    <router-link to="/FinishAll" class="accept-btn fs-28">
-      完成
+    <div class="row text-white mt-5 fs-16">
+      <div class="col-2 pt-2 ps-5"></div>
+      <div class="col">
+        <div class=" bg-danger title  me-3">
+          每日站立會議(Daily Scrum)
+        </div>
+        <p class="content d-flex justify-content-center align-items-center mx-2 mt-3">
+          每天都要進行的會議，以15分鐘為限制<br>
+          ．昨天為團隊的短衝目標(Sprint Goal)做了那些進度<br>
+          ．今天我會如何準備來幫助團隊達到短衝目標<br>
+          ．過程中有遇到什麼問題、難題<br>
+          透過團隊分享，追蹤大家的工作狀況。
+        </p>
+      </div>
+      <div class="col">
+        <div class="bg-secondary title me-3">
+          短衝檢視會議(Sprint Review)
+        </div>
+        <p class="content d-flex justify-content-center align-items-center mx-2 mt-3">
+          用來檢視該次短衝增量的成<br>
+          果，以蒐集相關的回饋數據<br>
+          或意見。
+        </p>
+      </div>
+      <div class="col">
+        <div class="bg-success title">
+          短衝自省會議(Sprint Retrospective)
+        </div>
+        <p class="content d-flex justify-content-center align-items-center mx-2 mt-3">
+          團隊在自省會議裡, 共同回顧該短衝歷程發生的事情<br>
+          ．好的地方<br>
+          ．可以改進的地方<br>
+          ．如何維持我們已有的成功經驗<br>
+          優化工作流程、讓團隊有變得更好的機會。
+        </p>
+      </div>
+    </div>
+    <router-link to="/TestProcess" class="next-btn fs-28">
+      我了解了
     </router-link>
   </div>
 </template>
@@ -54,22 +79,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.accept-btn {
-  text-decoration: none;
-  position: absolute;
-  right: 5%;
-  bottom: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color:  white;
-  padding: 16px;
-  width: 280px;
-  height: 88px;
-  background: #000000;
-  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-}
 .speaker-box {
   display: flex;
   justify-content: start;
@@ -92,5 +101,17 @@ export default {
   position: absolute;
   top: 15px;
   left: -14px;
+}
+.title {
+  width: 100%;
+  height: 76px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 8px;
+}
+.content {
+  font-size: 14px;
+  line-height: 24px;
 }
 </style>
