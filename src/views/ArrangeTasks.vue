@@ -1,50 +1,41 @@
 <template>
   <div class="container vh-100 d-flex justify-content-center align-items-center flex-column Noto-Sans-TC fs-20">
-    <div class="test">
+    <div class="">
       <!-- <p class="todolist text-white fs-30">產品待辦清單</p> -->
-      <div class="container sort-works text-white">
-        <div class="row mt-4" id="g1">
-          <div class="col-3 card" data-id="1">
+      <div class="container text-white">
+        <div class="row test" id="g1">
+          <div class="col-3 card test" data-score="8">
             <img src="../assets/images/todo5.png" alt="">
           </div>
-          <div class="col-3 card" data-id="2">
+          <div class="col-3 card test" data-score="8">
             <img src="../assets/images/todo6.png" alt="">
           </div>
-          <div class="col-3 card" data-id="3">
+          <div class="col-3 card test" data-score="13">
             <img src="../assets/images/todo7.png" alt="">
           </div>
-          <div class="col-3 card" data-id="4">
+          <div class="col-3 card test" data-score="5">
             <img src="../assets/images/todo8.png" alt="">
           </div>
         </div>
       </div>
     </div>
-    <div class="test mt-5">
+    <div class="mt-5">
       <!-- <p class="todolist text-white fs-30">
         開發 A 組 <br>短衝待辦清單
       </p> -->
       <div class="container sort-works text-white">
-        <div class="row mt-4" id="g2">
-          <!-- <div class="col-12 table test" >
-
-          </div> -->
-          <!-- <div class="col-3 table">
-
-          </div> -->
-          <!-- <div class="col-2 table" data-id="7">
-
-          </div> -->
-          <!-- <div class="col-2 table" data-id="8">
-
-          </div> -->
+        <div class="row test" id="g2">
         </div>
       </div>
       <div class="text-white text-center">
         請把需求拖移到方框中(加總後不得超過20點)
       </div>
     </div>
+    <div class="text-white fs-40 Roboto test ms-auto">
+      {{ totalScore }} / 20
+    </div>
     <router-link to="/LearnProcess" class="next-btn fs-28">
-      準備好了！
+      準備好了！<br>
       開始 Sprint
     </router-link>
   </div>
@@ -53,37 +44,55 @@
 <script>
 import Sortable from 'sortablejs'
 export default {
-  mounted () {
-    // 第一组
-    const g1 = document.getElementById('g1')
-    const candidate = Sortable.create(g1, {
-      group: 'shart',
-      animation: 500
-    })
-    console.log(candidate)
-    // 第二组
-    const g2 = document.getElementById('g2')
-    const ops2 = {
-      animation: 1000,
-      group: 'shart'
+  data () {
+    return {
+      totalScore: 0
     }
-    var sortable2 = Sortable.create(g2, ops2)
-    console.log(sortable2)
+  },
+  mounted () {
+    const g1 = document.getElementById('g1')
+    const backlog = Sortable.create(g1, {
+      group: 'QQ',
+      animation: 500,
+      dataIdAttr: 'data-score'
+    })
+    console.log(backlog)
+    const g2 = document.getElementById('g2')
+    const sprint = Sortable.create(g2, {
+      group: 'QQ',
+      animation: 500,
+      dataIdAttr: 'data-score',
+      onAdd: (e) => {
+        const arr = sprint.toArray()
+        console.log(arr)
+      },
+      onRemove: (e) => {
+        const arr = sprint.toArray()
+        console.log(arr)
+      }
+    })
+
+    console.log(sprint)
   }
 
 }
 </script>
 
 <style lang="scss" scoped>
+#g1,#g2 {
+  width: 794px;
+  height: 298px;
+}
 .sort-works {
   width: 794px;
-  height: 289px;
+  height: 298px;
   border: 4px solid #FFFFFF;
   border-radius: 30px;
 }
 .card {
   width: 167px;
   height: 235px;
+  margin: 31.5px 15.75px 0px 15.75px ;
 }
 .todolist {
   position: absolute;
