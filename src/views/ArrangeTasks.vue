@@ -5,30 +5,27 @@
         <p class="todolist text-white fs-30">產品待辦清單</p>
         <div class="row" id="g1">
           <div class="col-3 " data-score="8">
-            <img src="../assets/images/todo5.png" alt="" class="card">
+            <img src="../assets/images/todo5.png" alt="todo-card" class="card">
           </div>
           <div class="col-3" data-score="8">
-            <img src="../assets/images/todo6.png" alt="" class="card">
+            <img src="../assets/images/todo6.png" alt="todo-card" class="card">
           </div>
           <div class="col-3" data-score="13">
-            <img src="../assets/images/todo7.png" alt="" class="card">
+            <img src="../assets/images/todo7.png" alt="todo-card" class="card">
           </div>
           <div class="col-3" data-score="5">
-            <img src="../assets/images/todo8.png" alt="" class="card">
+            <img src="../assets/images/todo8.png" alt="todo-card" class="card">
           </div>
         </div>
       </div>
     </div>
     <div class="mt-5">
-      <!-- <p class="todolist text-white fs-30">
-        開發 A 組 <br>短衝待辦清單
-      </p> -->
       <div class="container sort-works text-white position-relative">
         <p class="todolist text-white fs-30">開發 A 組 <br>短衝待辦清單</p>
         <div class="row" id="g2">
         </div>
       </div>
-      <div class="text-white text-center">
+      <div class="text-white text-center mt-3">
         請把需求拖移到方框中(加總後不得超過20點)
       </div>
     </div>
@@ -60,6 +57,7 @@
       </div>
     </div>
   </div>
+  <div class="bg-chips5"></div>
   <!-- <audio src="../assets/sounds/過關音效.m4a"></audio> -->
 </template>
 
