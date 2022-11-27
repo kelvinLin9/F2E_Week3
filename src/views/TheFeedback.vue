@@ -29,36 +29,69 @@
         <h2 class="my-4">做得好的地方</h2>
         <div class="row">
           <div class="col">
-            <img src="../assets/images/feedback1.png" alt="">
+            <img src="../assets/images/feedback1.png" alt="feedback"    class="cursor-pointer">
           </div>
-          <div class="col">
-            <img src="../assets/images/feedback2.png" alt="">
+          <div class="col"
+              @click="answer1 = !answer1"
+          >
+            <img src="../assets/images/feedback2.png" alt="feedback" v-if="!answer1" class="cursor-pointer">
+            <img src="../assets/images/feedback2-answer.png" alt="feedback" v-else class="cursor-pointer">
           </div>
         </div>
       </div>
       <div class="col text-center text-white fs-30">
         <h2 class="my-4">有哪些可以做得更好？</h2>
         <div class="row">
-          <div class="col">
-            <img src="../assets/images/feedback3.png" alt="">
+          <div class="col"
+          @click="answer2 = !answer2"
+          >
+            <img src="../assets/images/feedback3.png" alt="feedback" v-if="!answer2" class="cursor-pointer">
+            <img src="../assets/images/feedback3-answer.png" alt="feedback" v-else class="cursor-pointer">
           </div>
           <div class="col">
-            <img src="../assets/images/feedback4.png" alt="">
+            <img src="../assets/images/feedback4.png" alt="feedback" class="cursor-pointer">
           </div>
         </div>
       </div>
     </div>
 
-    <router-link to="/FinishAll" class="next-btn fs-28">
-      我想我了解了
-    </router-link>
+    <button  class="next-btn fs-28" @click="finish()">
+      完成
+    </button>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" ref="modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content fs-20">
+        <div class="modal-body text-white text-center mt-4">
+          選擇錯誤，請再思考一下
+          <button class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
+        </div>
+      </div>
+    </div>
+    </div>
   </div>
 </template>
 
 <script>
-
+import Modal from 'bootstrap/js/dist/modal'
 export default {
-
+  data () {
+    return {
+      answer1: false,
+      answer2: false
+    }
+  },
+  methods: {
+    finish () {
+      if (this.answer1 && this.answer2) {
+        this.$router.push('/FinishAll')
+      } else {
+        this.modal.show()
+      }
+    }
+  },
+  mounted () {
+    this.modal = new Modal(this.$refs.modal)
+  }
 }
 </script>
 
@@ -85,5 +118,29 @@ export default {
   position: absolute;
   top: 15px;
   left: -14px;
+}
+.modal-content {
+  width: 486px;
+  height: 216px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 30px;
+  background: #000000;
+  border-radius: 20px;
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 301px;
+    height: 58px;
+    background: #9C0700;
+    border-radius: 9px;
+  }
 }
 </style>

@@ -60,6 +60,7 @@
       </div>
     </div>
   </div>
+  <audio src="../assets/sounds/放下撲克牌音效.m4a"></audio>
 </template>
 
 <script>
@@ -85,6 +86,11 @@ export default {
   mounted () {
     this.modalZero = new Modal(this.$refs.modalZero)
     this.modalOver20 = new Modal(this.$refs.modalOver20)
+    // const audioContext = new AudioContext()
+    // const element = document.querySelector(audio)
+    // const source = audioContext.createMediaElementSource(element)
+    // source.connect(audioContext.destination)
+    // audio.play()
     const g1 = document.getElementById('g1')
     Sortable.create(g1, {
       group: 'QQ',

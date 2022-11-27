@@ -2,7 +2,7 @@
   <div class="">
     <div class="bg-poker1"></div>
     <div class="bg-poker2"></div>
-    <div class="bg-logo"></div>
+    <router-link to="/" class="bg-logo"></router-link>
     <div class="bg-coin1"></div>
     <div class="bg-coin2"></div>
     <div class="bg-coin3"></div>
