@@ -1,10 +1,10 @@
 <template>
   <div class="container vh-100 d-flex justify-content-center align-items-center flex-column Noto-Sans-TC fs-20">
-    <p class="todolist text-white fs-30">產品待辦清單</p>
     <div class="sort-works-up text-white d-flex justify-content-center align-items-center">
       用<span class="fs-24">&ensp;拖移&ensp;</span>的方式調整優先順序
     </div>
-    <div class="container sort-works text-white">
+    <div class="container sort-works text-white position-relative">
+      <p class="todolist text-white fs-30">產品待辦清單</p>
       <div class="row mt-4" id="sort-works">
         <div class="col sort-work" data-id="4">
           <img src="../assets/images/todo4.png" alt="">
@@ -29,11 +29,22 @@
       完成
     </button>
   </div>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" ref="modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content fs-20">
+        <div class="modal-body text-white text-center mt-4">
+          哦歐！排序錯誤，請再調整順序
+          <button class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import Sortable from 'sortablejs'
 import router from '@/router'
+import Modal from 'bootstrap/js/dist/modal'
 export default {
   data () {
     return {
@@ -45,7 +56,7 @@ export default {
       if (this.sortedCorrectly) {
         router.push('/MembersTalk')
       } else {
-        alert('FQ')
+        this.modal.show()
       }
     }
   },
@@ -64,8 +75,8 @@ export default {
         }
       }
     }
-    // 初始化
-    var sortable = Sortable.create(sortWorks, ops)
+    const sortable = Sortable.create(sortWorks, ops)
+    this.modal = new Modal(this.$refs.modal)
   }
 }
 </script>
@@ -98,6 +109,31 @@ export default {
 .todolist {
   position: absolute;
   top: 50%;
-  left: 13%;
+  left: -27%;
+  transform: translateY(-50%);
+}
+.modal-content {
+  width: 486px;
+  height: 216px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 30px;
+  background: #000000;
+  border-radius: 20px;
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 301px;
+    height: 58px;
+    background: #9C0700;
+    border-radius: 9px;
+  }
 }
 </style>

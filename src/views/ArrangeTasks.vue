@@ -1,20 +1,20 @@
 <template>
   <div class="container vh-100 d-flex justify-content-center align-items-center flex-column Noto-Sans-TC fs-20">
-    <div class="">
-      <!-- <p class="todolist text-white fs-30">產品待辦清單</p> -->
-      <div class="container text-white">
-        <div class="row test" id="g1">
-          <div class="col-3 card test" data-score="8">
-            <img src="../assets/images/todo5.png" alt="">
+    <div>
+      <div class="container text-white position-relative">
+        <p class="todolist text-white fs-30">產品待辦清單</p>
+        <div class="row" id="g1">
+          <div class="col-3 " data-score="8">
+            <img src="../assets/images/todo5.png" alt="" class="card">
           </div>
-          <div class="col-3 card test" data-score="8">
-            <img src="../assets/images/todo6.png" alt="">
+          <div class="col-3" data-score="8">
+            <img src="../assets/images/todo6.png" alt="" class="card">
           </div>
-          <div class="col-3 card test" data-score="13">
-            <img src="../assets/images/todo7.png" alt="">
+          <div class="col-3" data-score="13">
+            <img src="../assets/images/todo7.png" alt="" class="card">
           </div>
-          <div class="col-3 card test" data-score="5">
-            <img src="../assets/images/todo8.png" alt="">
+          <div class="col-3" data-score="5">
+            <img src="../assets/images/todo8.png" alt="" class="card">
           </div>
         </div>
       </div>
@@ -23,40 +23,75 @@
       <!-- <p class="todolist text-white fs-30">
         開發 A 組 <br>短衝待辦清單
       </p> -->
-      <div class="container sort-works text-white">
-        <div class="row test" id="g2">
+      <div class="container sort-works text-white position-relative">
+        <p class="todolist text-white fs-30">開發 A 組 <br>短衝待辦清單</p>
+        <div class="row" id="g2">
         </div>
       </div>
       <div class="text-white text-center">
         請把需求拖移到方框中(加總後不得超過20點)
       </div>
     </div>
-    <div class="text-white fs-40 Roboto test ms-auto">
-      {{ totalScore }} / 20
+    <div class="total-score text-white fs-40 Roboto ms-auto">
+      <span :class="{'text-danger' : totalScore > 20}">{{ totalScore }}</span> / 20
     </div>
-    <router-link to="/LearnProcess" class="next-btn fs-28">
+    <button  class="next-btn fs-28" @click="ready">
       準備好了！<br>
       開始 Sprint
-    </router-link>
+    </button>
+  </div>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" ref="modalZero">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content fs-20">
+        <div class="modal-body text-white text-center mt-4">
+          尚未置入任何項目，請置入項目
+          <button class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" ref="modalOver20">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content fs-20">
+        <div class="modal-body text-white text-center mt-4">
+          超過20點，請再調整清單
+          <button class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import Sortable from 'sortablejs'
+import Modal from 'bootstrap/js/dist/modal'
 export default {
   data () {
     return {
       totalScore: 0
     }
   },
+  methods: {
+    ready () {
+      if (this.totalScore === 0) {
+        this.modalZero.show()
+      } else if (this.totalScore > 20) {
+        this.modalOver20.show()
+      } else {
+        this.$router.push('/LearnProcess')
+      }
+    }
+  },
   mounted () {
+    this.modalZero = new Modal(this.$refs.modalZero)
+    this.modalOver20 = new Modal(this.$refs.modalOver20)
     const g1 = document.getElementById('g1')
-    const backlog = Sortable.create(g1, {
+    Sortable.create(g1, {
       group: 'QQ',
       animation: 500,
       dataIdAttr: 'data-score'
     })
-    console.log(backlog)
+    // console.log(backlog)
     const g2 = document.getElementById('g2')
     const sprint = Sortable.create(g2, {
       group: 'QQ',
@@ -64,15 +99,19 @@ export default {
       dataIdAttr: 'data-score',
       onAdd: (e) => {
         const arr = sprint.toArray()
-        console.log(arr)
+        this.totalScore = 0
+        arr.forEach((item) => {
+          this.totalScore += parseInt(item, 10)
+        })
       },
       onRemove: (e) => {
         const arr = sprint.toArray()
-        console.log(arr)
+        this.totalScore = 0
+        arr.forEach((item) => {
+          this.totalScore += parseInt(item, 10)
+        })
       }
     })
-
-    console.log(sprint)
   }
 
 }
@@ -81,27 +120,57 @@ export default {
 <style lang="scss" scoped>
 #g1,#g2 {
   width: 794px;
-  height: 298px;
+  height: 289px;
 }
 .sort-works {
   width: 794px;
-  height: 298px;
+  height: 289px;
   border: 4px solid #FFFFFF;
   border-radius: 30px;
 }
 .card {
   width: 167px;
   height: 235px;
-  margin: 31.5px 15.75px 0px 15.75px ;
+  margin-top: 25px;
 }
 .todolist {
   position: absolute;
   top: 50%;
-  left: 13%;
+  left: -27%;
+  transform: translateY(-50%);
 }
 .table {
   // width: 168px;
   height: 236px;
   border: 2px dashed #FFFFFF;
+}
+.total-score{
+  position: absolute;
+  bottom: 17%;
+  right: 11%;
+}
+.modal-content {
+  width: 486px;
+  height: 216px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 30px;
+  background: #000000;
+  border-radius: 20px;
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 301px;
+    height: 58px;
+    background: #9C0700;
+    border-radius: 9px;
+  }
 }
 </style>

@@ -27,31 +27,95 @@
     <div class="row text-white mt-5 fs-16">
       <div class="col-2 pt-2 ps-5"></div>
       <div class="col">
-        <div class=" bg-danger title  me-3">
+        <div class=" bg-danger title-box">
           每日站立會議(Daily Scrum)
         </div>
       </div>
-      <div class="col">
-        <div class="bg-secondary title me-3">
+      <div class="col" id="g1">
+        <div class="bg-secondary title-box">
           短衝檢視會議(Sprint Review)
+          <img src="../assets/images/move-icon.png" alt="move-icon">
         </div>
       </div>
-      <div class="col">
-        <div class="bg-success title">
+      <div class="col" id="g3">
+        <div class="bg-success title-box">
           短衝自省會議(Sprint Retrospective)
+          <img src="../assets/images/move-icon.png" alt="move-icon">
         </div>
       </div>
     </div>
-    <router-link to="/TheFeedback" class="next-btn fs-28">
+    <div class="place-box1" id="g2"></div>
+    <div class="place-box2" id="g4"></div>
+    <button  class="next-btn fs-28" @click="finish()">
       完成
-    </router-link>
+    </button>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" ref="modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content fs-20">
+        <div class="modal-body text-white text-center mt-4">
+          置入錯誤，請重新置入
+          <button class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </template>
 
 <script>
-
+import Sortable from 'sortablejs'
+import Modal from 'bootstrap/js/dist/modal'
 export default {
-
+  data () {
+    return {
+      putToBox1: false,
+      putToBox2: false
+    }
+  },
+  methods: {
+    finish () {
+      if (this.putToBox1 && this.putToBox2) {
+        this.$router.push('/TheFeedback')
+      } else {
+        this.modal.show()
+      }
+    }
+  },
+  mounted () {
+    this.modal = new Modal(this.$refs.modal)
+    const g1 = document.getElementById('g1')
+    Sortable.create(g1, {
+      group: 'box1',
+      animation: 500
+    })
+    const g2 = document.getElementById('g2')
+    Sortable.create(g2, {
+      group: 'box1',
+      animation: 500,
+      onAdd: (e) => {
+        this.putToBox1 = true
+      },
+      onRemove: (e) => {
+        this.putToBox1 = false
+      }
+    })
+    const g3 = document.getElementById('g3')
+    Sortable.create(g3, {
+      group: 'box2',
+      animation: 500
+    })
+    const g4 = document.getElementById('g4')
+    Sortable.create(g4, {
+      group: 'box2',
+      animation: 500,
+      onAdd: (e) => {
+        this.putToBox2 = true
+      },
+      onRemove: (e) => {
+        this.putToBox2 = false
+      }
+    })
+  }
 }
 </script>
 
@@ -79,12 +143,60 @@ export default {
   top: 15px;
   left: -14px;
 }
-.title {
-  width: 100%;
+.title-box {
+  width: 309px;
   height: 76px;
   display: flex;
   justify-content:center;
   align-items: center;
   border-radius: 8px;
+}
+.place-box1 {
+  width: 309px;
+  height: 80px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 17%;
+  left: 40%;
+  border: dashed 3px #FF7E06;
+}
+.place-box2 {
+  width: 309px;
+  height: 80px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 17%;
+  left: 60%;
+  border: dashed 3px #009A50;
+}
+.modal-content {
+  width: 486px;
+  height: 216px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 30px;
+  background: #000000;
+  border-radius: 20px;
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 301px;
+    height: 58px;
+    background: #9C0700;
+    border-radius: 9px;
+  }
 }
 </style>
