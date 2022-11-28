@@ -1,6 +1,6 @@
 <template>
   <div class="Noto-Sans-TC container">
-    <div class="row">
+    <div class="row" id="box-1">
       <div class="col-2 pt-2 ps-5 my-5">
         <img src="../assets/images/jason.png" alt="">
       </div>
@@ -11,15 +11,15 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="box-2">
       <div class="col-2 pt-2 ps-5 "></div>
       <div class="col-10 speaker-box fs-20 position-relative">
         <p>
-          提示：請用拖移的方式將標籤拖移至對應的方框裡
+          Sprint是一個短衝，開發團隊會在這期間執行開發。在這段期間內，開發團隊舉辦每日站立會議(Daily Scrum)，追蹤成員間的工作狀況，除了<span class="text-danger">每日站立會議</span>，在Sprint的結束也會包含<span class="text-danger">短衝檢視會議(Sprint Review)</span>、<span class="text-danger">短衝自省會議(Sprint Retrospective)</span>。
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="box-3">
       <div class="col-2 pt-2 ps-5"></div>
       <div class="col-10 speaker-box fs-20 position-relative mt-5">
         <p>
@@ -28,7 +28,7 @@
         </p>
       </div>
     </div>
-    <div class="row text-white mt-5 fs-16">
+    <div class="row text-white mt-5 fs-16" id="box-4">
       <div class="col-2 pt-2 ps-5"></div>
       <div class="col">
         <div class=" bg-danger title  me-3">
@@ -72,9 +72,14 @@
 </template>
 
 <script>
-
+import { gsap } from 'gsap'
 export default {
-
+  mounted () {
+    gsap.to('#box-1', { opacity: 1, duration: 1, delay: 0.5 })
+    gsap.to('#box-2', { opacity: 1, duration: 1, delay: 1.5 })
+    gsap.to('#box-3', { opacity: 1, duration: 1, delay: 2.5 })
+    gsap.to('#box-4', { opacity: 1, duration: 1, delay: 3.5 })
+  }
 }
 </script>
 
@@ -113,5 +118,8 @@ export default {
 .content {
   font-size: 14px;
   line-height: 24px;
+}
+#box-1,#box-2,#box-3,#box-4{
+  opacity: 0;
 }
 </style>

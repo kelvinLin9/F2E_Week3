@@ -125,7 +125,6 @@ export default {
   height: 289px;
 }
 .sort-works {
-  outline: solid 1px red;
   width: 794px;
   height: 289px;
   border: 4px solid #FFFFFF;

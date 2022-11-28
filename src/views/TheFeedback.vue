@@ -1,6 +1,6 @@
 <template>
   <div class="Noto-Sans-TC container">
-    <div class="row">
+    <div class="row" id="box-1">
       <div class="col-2 pt-2 ps-5 my-5">
         <img src="../assets/images/allen.png" alt="">
       </div>
@@ -11,7 +11,7 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="box-2">
       <div class="col-2 pt-2 ps-5 ">
         <!-- <img src="../assets/images/tina.png" alt="">
         <img src="../assets/images/tina-name.png" alt=""> -->
@@ -23,7 +23,7 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="box-3">
       <div class="col-2 pt-2 ps-5"></div>
       <div class="col text-center text-white fs-30">
         <h2 class="my-4">做得好的地方</h2>
@@ -56,7 +56,7 @@
     </div>
 
     <button  class="next-btn fs-28" @click="finish()">
-      完成
+      我想我了解了
     </button>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" ref="modal">
     <div class="modal-dialog modal-dialog-centered">
@@ -73,6 +73,7 @@
 
 <script>
 import Modal from 'bootstrap/js/dist/modal'
+import { gsap } from 'gsap'
 export default {
   data () {
     return {
@@ -90,6 +91,9 @@ export default {
     }
   },
   mounted () {
+    gsap.to('#box-1', { opacity: 1, duration: 1, delay: 0.5 })
+    gsap.to('#box-2', { opacity: 1, duration: 1, delay: 1.5 })
+    gsap.to('#box-3', { opacity: 1, duration: 1, delay: 2.5 })
     this.modal = new Modal(this.$refs.modal)
   }
 }
@@ -142,5 +146,8 @@ export default {
     background: #9C0700;
     border-radius: 9px;
   }
+}
+#box-1,#box-2,#box-3{
+  opacity: 0;
 }
 </style>

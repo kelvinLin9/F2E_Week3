@@ -1,6 +1,6 @@
 <template>
   <div class="Noto-Sans-TC container">
-    <div class="row">
+    <div class="row" id="box-1">
       <div class="col-2 pt-2 ps-5 mt-5">
         <img src="../assets/images/tina.png" alt="">
       </div>
@@ -11,7 +11,7 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="box-2">
       <div class="col-2 pt-2 ps-5 mt-5">
         <img src="../assets/images/tim.png" alt="">
       </div>
@@ -22,7 +22,7 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="box-3">
       <div class="col-2 pt-2 ps-5 mt-5">
         <img src="../assets/images/jason.png" alt="">
       </div>
@@ -33,7 +33,7 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="box-4">
       <div class="col-2 pt-2 ps-5 mt-5">
         <img src="../assets/images/allen.png" alt="">
       </div>
@@ -51,8 +51,14 @@
 </template>
 
 <script>
-// import Sortable from 'sortablejs'
+import { gsap } from 'gsap'
 export default {
+  mounted () {
+    gsap.to('#box-1', { opacity: 1, duration: 1, delay: 0.5 })
+    gsap.to('#box-2', { opacity: 1, duration: 1, delay: 1.5 })
+    gsap.to('#box-3', { opacity: 1, duration: 1, delay: 2.5 })
+    gsap.to('#box-4', { opacity: 1, duration: 1, delay: 3.5 })
+  }
 }
 </script>
 
@@ -79,5 +85,8 @@ export default {
   position: absolute;
   top: 15px;
   left: -14px;
+}
+#box-1,#box-2,#box-3,#box-4{
+  opacity: 0;
 }
 </style>
