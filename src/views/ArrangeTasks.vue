@@ -5,16 +5,16 @@
         <p class="todolist text-white fs-30">產品待辦清單</p>
         <div class="row" id="g1">
           <div class="col-3 " data-score="8">
-            <img src="../assets/images/todo5.png" alt="todo-card" class="card">
+            <img src="../assets/images/todo5.png" alt="todo-card" class="card cursor-pointer">
           </div>
           <div class="col-3" data-score="8">
-            <img src="../assets/images/todo6.png" alt="todo-card" class="card">
+            <img src="../assets/images/todo6.png" alt="todo-card" class="card cursor-pointer">
           </div>
           <div class="col-3" data-score="13">
-            <img src="../assets/images/todo7.png" alt="todo-card" class="card">
+            <img src="../assets/images/todo7.png" alt="todo-card" class="card cursor-pointer">
           </div>
           <div class="col-3" data-score="5">
-            <img src="../assets/images/todo8.png" alt="todo-card" class="card">
+            <img src="../assets/images/todo8.png" alt="todo-card" class="card cursor-pointer">
           </div>
         </div>
       </div>
@@ -125,15 +125,19 @@ export default {
   height: 289px;
 }
 .sort-works {
+  outline: solid 1px red;
   width: 794px;
   height: 289px;
   border: 4px solid #FFFFFF;
   border-radius: 30px;
 }
 .card {
-  width: 167px;
-  height: 235px;
+  // width: 167px;
+  // height: 235px;
   margin-top: 25px;
+    &:hover {
+    transform: scale(1.05);
+  }
 }
 .todolist {
   position: absolute;

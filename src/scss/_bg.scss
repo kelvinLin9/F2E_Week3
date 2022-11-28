@@ -57,8 +57,8 @@
   position: absolute;
   width: 202px;
   height: 222px;
-  left: 53%;
-  bottom: 5%; 
+  left: 68%;
+  bottom: 60%; 
 }
 .bg-chips5 { 
   background-image: url(~assets/images/bg-chips5.png);
@@ -77,13 +77,21 @@
   bottom: 1.5%; 
   z-index: 1050;
 }
-.bg-dice {
+.bg-dice1 {
   background-image: url(~assets/images/bg-dice1.png);
   position: absolute;
   width: 147px;
   height: 142px;
   right: 2%;
   top: 50%; 
+}
+.bg-dice2 {
+  background-image: url(~assets/images/bg-dice1.png);
+  position: absolute;
+  width: 147px;
+  height: 142px;
+  left: 20%;
+  top: 60%; 
 }
 .bg-test-process {
   background-image: url(~assets/images/bg-test-process.png);

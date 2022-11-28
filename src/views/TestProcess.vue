@@ -27,18 +27,18 @@
     <div class="row text-white mt-5 fs-16">
       <div class="col-2 pt-2 ps-5"></div>
       <div class="col">
-        <div class=" bg-danger title-box">
+        <div class=" bg-danger title-box-red">
           每日站立會議(Daily Scrum)
         </div>
       </div>
       <div class="col" id="g1">
-        <div class="bg-secondary title-box">
+        <div class="bg-secondary title-box cursor-pointer">
           短衝檢視會議(Sprint Review)
           <img src="../assets/images/move-icon.png" alt="move-icon">
         </div>
       </div>
       <div class="col" id="g3">
-        <div class="bg-success title-box">
+        <div class="bg-success title-box cursor-pointer">
           短衝自省會議(Sprint Retrospective)
           <img src="../assets/images/move-icon.png" alt="move-icon">
         </div>
@@ -143,6 +143,17 @@ export default {
   top: 15px;
   left: -14px;
 }
+.title-box-red {
+  width: 309px;
+  height: 76px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 55%;
+  left: 15%;
+}
 .title-box {
   width: 309px;
   height: 76px;
@@ -150,6 +161,9 @@ export default {
   justify-content:center;
   align-items: center;
   border-radius: 8px;
+    &:hover {
+    transform: scale(1.05);
+  }
 }
 .place-box1 {
   width: 309px;

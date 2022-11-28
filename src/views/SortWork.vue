@@ -6,17 +6,17 @@
     <div class="container sort-works text-white position-relative">
       <p class="todolist text-white fs-30">產品待辦清單</p>
       <div class="row mt-4" id="sort-works">
-        <div class="col sort-work" data-id="4">
-          <img src="../assets/images/todo4.png" alt="">
+        <div class="col sort-work cursor-pointer" data-id="4">
+          <img src="../assets/images/todo4.png" alt="todo-card">
         </div>
-        <div class="col sort-work" data-id="2">
-          <img src="../assets/images/todo2.png" alt="">
+        <div class="col sort-work cursor-pointer" data-id="2">
+          <img src="../assets/images/todo2.png" alt="todo-card">
         </div>
-        <div class="col sort-work" data-id="1">
-          <img src="../assets/images/todo1.png" alt="">
+        <div class="col sort-work cursor-pointer" data-id="1">
+          <img src="../assets/images/todo1.png" alt="todo-card">
         </div>
-        <div class="col sort-work" data-id="3">
-          <img src="../assets/images/todo3.png" alt="">
+        <div class="col sort-work cursor-pointer" data-id="3">
+          <img src="../assets/images/todo3.png" alt="todo-card">
         </div>
       </div>
     </div>
@@ -39,6 +39,8 @@
       </div>
     </div>
   </div>
+  <div class="bg-dice2"></div>
+  <div class="bg-chips4"></div>
 </template>
 
 <script>
@@ -105,6 +107,9 @@ export default {
 .sort-work {
   width: 167px;
   height: 235px;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 .todolist {
   position: absolute;

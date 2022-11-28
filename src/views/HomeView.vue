@@ -6,7 +6,7 @@
     <div class="bg-chips1"></div>
     <div class="bg-chips2"></div>
     <div class="bg-chips3"></div>
-    <div class="bg-dice"></div>
+    <div class="bg-dice1"></div>
     <h1 class="Noto-Sans-TC text-white fs-28 position-absolute top-50 start-50 translate-middle">
       哈囉，歡迎加入六角資訊，<br>
       在正式加入專案開發之前，<br>
