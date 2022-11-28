@@ -14,7 +14,7 @@
       正式加入六角資訊的開發 A 組。
     </h1>
   </div>
-  <footer class="bg-white fixed-bottom d-flex justify-content-center align-items-center">
+  <footer class="bg-white fixed-bottom d-jc-ac">
     <img src="../assets/images/jira.png" alt="jira-logo" class="mx-5">
     <img src="../assets/images/confluence.png" alt="confluence-logo" class="mx-5">
   </footer>

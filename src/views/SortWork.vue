@@ -1,6 +1,6 @@
 <template>
-  <div class="container vh-100 d-flex justify-content-center align-items-center flex-column Noto-Sans-TC fs-20">
-    <div class="sort-works-up text-white d-flex justify-content-center align-items-center">
+  <div class="container vh-100 d-jc-ac flex-column Noto-Sans-TC fs-20">
+    <div class="sort-works-up text-white d-jc-ac">
       用<span class="fs-24">&ensp;拖移&ensp;</span>的方式調整優先順序
     </div>
     <div class="container sort-works text-white position-relative">

@@ -2,7 +2,7 @@
   <div class="Noto-Sans-TC container">
     <div class="row" id="box-1">
       <div class="col-2 pt-2 ps-5 mt-5">
-        <img src="../assets/images/tina.png" alt="">
+        <img src="../assets/images/tina.png" alt="tina">
       </div>
       <div class="col-10 mt-5 speaker-box fs-16 position-relative">
         <div class="speak"></div>
@@ -13,7 +13,7 @@
     </div>
     <div class="row" id="box-2">
       <div class="col-2 pt-2 ps-5 mt-5">
-        <img src="../assets/images/tim.png" alt="">
+        <img src="../assets/images/tim.png" alt="tim">
       </div>
       <div class="col-10 mt-5 speaker-box fs-16 position-relative">
         <div class="speak"></div>
@@ -24,7 +24,7 @@
     </div>
     <div class="row" id="box-3">
       <div class="col-2 pt-2 ps-5 mt-5">
-        <img src="../assets/images/jason.png" alt="">
+        <img src="../assets/images/jason.png" alt="jason">
       </div>
       <div class="col-10 mt-5 speaker-box fs-16 position-relative">
         <div class="speak"></div>
@@ -35,7 +35,7 @@
     </div>
     <div class="row" id="box-4">
       <div class="col-2 pt-2 ps-5 mt-5">
-        <img src="../assets/images/allen.png" alt="">
+        <img src="../assets/images/allen.png" alt="allen">
       </div>
       <div class="col-10 mt-5 speaker-box fs-16 position-relative">
         <div class="speak"></div>
@@ -85,8 +85,5 @@ export default {
   position: absolute;
   top: 15px;
   left: -14px;
-}
-#box-1,#box-2,#box-3,#box-4{
-  opacity: 0;
 }
 </style>

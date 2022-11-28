@@ -1,5 +1,5 @@
 <template>
-  <div class="container vh-100 d-flex justify-content-center align-items-center flex-column Noto-Sans-TC fs-20">
+  <div class="container vh-100 d-jc-ac flex-column Noto-Sans-TC fs-20">
     <div>
       <div class="container text-white position-relative">
         <p class="todolist text-white fs-30">產品待辦清單</p>

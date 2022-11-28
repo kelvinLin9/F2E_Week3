@@ -2,7 +2,7 @@
   <div class="Noto-Sans-TC container">
     <div class="row" id="box-1">
       <div class="col-2 pt-2 ps-5 my-5">
-        <img src="../assets/images/jason.png" alt="">
+        <img src="../assets/images/jason.png" alt="jason">
       </div>
       <div class="col-10 my-5 speaker-box fs-16 position-relative">
         <div class="speaker-arrow"></div>
@@ -34,7 +34,7 @@
         <div class=" bg-danger title  me-3">
           每日站立會議(Daily Scrum)
         </div>
-        <p class="content d-flex justify-content-center align-items-center mx-2 mt-3">
+        <p class="content d-jc-ac mx-2 mt-3">
           每天都要進行的會議，以15分鐘為限制<br>
           ．昨天為團隊的短衝目標(Sprint Goal)做了那些進度<br>
           ．今天我會如何準備來幫助團隊達到短衝目標<br>
@@ -46,7 +46,7 @@
         <div class="bg-secondary title me-3">
           短衝檢視會議(Sprint Review)
         </div>
-        <p class="content d-flex justify-content-center align-items-center mx-2 mt-3">
+        <p class="content d-jc-ac mx-2 mt-3">
           用來檢視該次短衝增量的成<br>
           果，以蒐集相關的回饋數據<br>
           或意見。
@@ -56,7 +56,7 @@
         <div class="bg-success title">
           短衝自省會議(Sprint Retrospective)
         </div>
-        <p class="content d-flex justify-content-center align-items-center mx-2 mt-3">
+        <p class="content d-jc-ac mx-2 mt-3">
           團隊在自省會議裡, 共同回顧該短衝歷程發生的事情<br>
           ．好的地方<br>
           ．可以改進的地方<br>
@@ -118,8 +118,5 @@ export default {
 .content {
   font-size: 14px;
   line-height: 24px;
-}
-#box-1,#box-2,#box-3,#box-4{
-  opacity: 0;
 }
 </style>

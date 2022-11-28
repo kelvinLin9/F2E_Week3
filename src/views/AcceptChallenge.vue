@@ -2,7 +2,7 @@
   <div class="Noto-Sans-TC container">
     <div class="row" id="box-1">
       <div class="col-2 pt-2 ps-5 my-5">
-        <img src="../assets/images/tina.png" alt="">
+        <img src="../assets/images/tina.png" alt="tina-logo">
       </div>
       <div class="col-10 my-5 speaker-box fs-16 position-relative" >
         <div class="speak"></div>
@@ -13,18 +13,16 @@
     </div>
     <div class="row">
       <div class="col-2 pt-2 ps-5">
-        <!-- <img src="../assets/images/tina.png" alt="">
-        <img src="../assets/images/tina-name.png" alt=""> -->
       </div>
       <div class="col-10 speaker-box fs-20 position-relative" id="box-2">
         <!-- <div class="speak"></div> -->
         <p>
           我們公司也推薦使用Jira做任務的管理呢！
         </p>
-        <img src="../assets/images/jira.png" alt="">
+        <img src="../assets/images/jira.png" alt="jira-logo">
       </div>
     </div>
-    <router-link to="/SortWork" class="accept-btn fs-28">
+    <router-link to="/SortWork" class="next-btn fs-28">
       接受挑戰
     </router-link>
   </div>
@@ -79,8 +77,5 @@ export default {
   position: absolute;
   top: 15px;
   left: -14px;
-}
-#box-1 ,#box-2{
-  opacity: 0;
 }
 </style>

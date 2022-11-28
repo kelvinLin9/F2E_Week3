@@ -3,7 +3,7 @@
     <div class="bg-test-process"></div>
     <div class="row" id="box-1">
       <div class="col-2 pt-2 ps-5 my-5">
-        <img src="../assets/images/jason.png" alt="">
+        <img src="../assets/images/jason.png" alt="jason">
       </div>
       <div class="col-10 my-5 speaker-box fs-16 position-relative">
         <div class="speaker-arrow"></div>
@@ -14,11 +14,8 @@
     </div>
     <div class="row" id="box-2">
       <div class="col-2 pt-2 ps-5 ">
-        <!-- <img src="../assets/images/tina.png" alt="">
-        <img src="../assets/images/tina-name.png" alt=""> -->
       </div>
       <div class="col-10 speaker-box position-relative">
-        <!-- <div class="speaker-arrow"></div> -->
         <p class="text-danger">
           提示：請用拖移的方式將標籤拖移至對應的方框裡
         </p>
@@ -216,8 +213,5 @@ export default {
     background: #9C0700;
     border-radius: 9px;
   }
-}
-#box-1,#box-2,#box-3{
-  opacity: 0;
 }
 </style>
