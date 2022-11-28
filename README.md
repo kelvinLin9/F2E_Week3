@@ -18,8 +18,8 @@ https://kelvinlin9.github.io/F2E_Week3/#/
 - ESlint(Standard)
 
 ## 使用套件
-
-
+gsap
+sortablejs
 ## Project setup
 ```
 npm install
