@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="bg-poker1" @click="play()"></div>
+    <div class="bg-poker1"></div>
     <div class="bg-poker2"></div>
     <div class="bg-logo"></div>
     <div class="bg-chips1"></div>
@@ -16,23 +16,13 @@
     <router-link to="/AcceptChallenge" class="next-btn fs-28">
       開始挑戰
     </router-link>
-    <audio src="../assets/sounds/pass.mp3" ref="audio" id="audio"></audio>
   </div>
 </template>
 
 <script>
 
 export default {
-  methods: {
-    play () {
-      const audioPlay = this.$refs.audio
-      console.log(audioPlay)
-      audioPlay.play()
-      audioPlay.onended = function () {
-        audioPlay.play()
-      }
-    }
-  }
+
 }
 </script>
 
