@@ -16,13 +16,17 @@
     <router-link to="/AcceptChallenge" class="next-btn fs-28">
       開始挑戰
     </router-link>
+    <audio src="~static/sounds/pass.mp3" class="qqq"></audio>
   </div>
 </template>
 
 <script>
 
 export default {
-
+  mounted () {
+    const music = document.querySelector('.qqq')
+    console.log(music)
+  }
 }
 </script>
 
