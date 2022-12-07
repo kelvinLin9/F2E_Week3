@@ -52,7 +52,7 @@
       </div>
     </div>
 
-    <button  class="next-btn fs-28" @click="finish()">
+    <button  type="button" class="next-btn fs-28" @click="finish()">
       我想我了解了
     </button>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" ref="modal">
@@ -60,7 +60,7 @@
       <div class="modal-content fs-20">
         <div class="modal-body text-white text-center mt-4">
           選擇錯誤，請再思考一下
-          <button class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
+          <button type="button" class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
         </div>
       </div>
     </div>

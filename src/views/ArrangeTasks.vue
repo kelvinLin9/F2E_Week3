@@ -32,7 +32,7 @@
     <div class="total-score text-white fs-40 Roboto ms-auto">
       <span :class="{'text-danger' : totalScore > 20}">{{ totalScore }}</span> / 20
     </div>
-    <button  class="next-btn fs-28" @click="ready">
+    <button  type="button" class="next-btn fs-28" @click="ready">
       準備好了！<br>
       開始 Sprint
     </button>
@@ -42,7 +42,7 @@
       <div class="modal-content fs-20">
         <div class="modal-body text-white text-center mt-4">
           尚未置入任何項目，請置入項目
-          <button class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
+          <button type="button" class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
         </div>
       </div>
     </div>

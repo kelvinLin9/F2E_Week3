@@ -25,7 +25,7 @@
       <div>優先權</div>
       <div>→ 低</div>
     </div>
-    <button  class="next-btn fs-28" @click="finish">
+    <button  type="button" class="next-btn fs-28" @click="finish">
       完成
     </button>
   </div>
@@ -34,7 +34,7 @@
       <div class="modal-content fs-20">
         <div class="modal-body text-white text-center mt-4">
           哦歐！排序錯誤，請再調整順序
-          <button class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
+          <button type="button" class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
         </div>
       </div>
     </div>

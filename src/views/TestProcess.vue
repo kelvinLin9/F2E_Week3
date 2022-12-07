@@ -43,7 +43,7 @@
     </div>
     <div class="place-box1" id="g2"></div>
     <div class="place-box2" id="g4"></div>
-    <button  class="next-btn fs-28" @click="finish()">
+    <button  type="button" class="next-btn fs-28" @click="finish()">
       完成
     </button>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" ref="modal">
@@ -51,7 +51,7 @@
       <div class="modal-content fs-20">
         <div class="modal-body text-white text-center mt-4">
           置入錯誤，請重新置入
-          <button class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
+          <button type="button" class="btn text-white mt-4" data-bs-dismiss="modal">確定</button>
         </div>
       </div>
     </div>
